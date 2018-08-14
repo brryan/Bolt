@@ -1,0 +1,32 @@
+
+Currently Loaded Modules:
+  1) cmake/3.10.2                4) java/1.8.0_45     7) hdf5-parallel/1.8.16
+  2) gcc/6.4.0                   5) cudatoolkit/9.1
+  3) python/3.5-anaconda-4.1.1   6) openmpi/2.1.2
+
+
+python:12722 terminated with signal 11 at PC=2b6c70d8d65a SP=7fff01dbb810.  Backtrace:
+/usr/projects/hpcsoft/toss3/kodiak/openmpi/2.1.2-gcc-6.4.0/lib/libmpi.so.20(PMPI_Comm_test_inter+0x4a)[0x2b6c70d8d65a]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/lib/python3.5/site-packages/mpi4py/MPI.cpython-35m-x86_64-linux-gnu.so(+0x6d0be)[0x2b6b6bb4e0be]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/lib/python3.5/site-packages/petsc4py/lib/PETSc.cpython-35m-x86_64-linux-gnu.so(+0x2170eb)[0x2b6b669f70eb]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyCFunction_Call+0x131)[0x2b6b56d83241]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalFrameEx+0x951f)[0x2b6b56e0be6f]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x146a49)[0x2b6b56e0ca49]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalCodeEx+0x48)[0x2b6b56e0cbd8]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x9af42)[0x2b6b56d60f42]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyObject_Call+0x56)[0x2b6b56d2d786]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x83e7c)[0x2b6b56d49e7c]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyObject_Call+0x56)[0x2b6b56d2d786]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(+0xdc0e3)[0x2b6b56da20e3]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(+0xcfbaf)[0x2b6b56d95baf]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyObject_Call+0x56)[0x2b6b56d2d786]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalFrameEx+0x7dc3)[0x2b6b56e0a713]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x146a49)[0x2b6b56e0ca49]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalCodeEx+0x48)[0x2b6b56e0cbd8]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalCode+0x3b)[0x2b6b56e0cc1b]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyRun_FileExFlags+0x130)[0x2b6b56e31e70]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(PyRun_SimpleFileExFlags+0x18b)[0x2b6b56e3346b]
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/bin/../lib/libpython3.5m.so.1.0(Py_Main+0xcd1)[0x2b6b56e4e811]
+python(main+0x15d)[0x400bbd]
+/usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b6b57d093d5]
+python[0x400999]

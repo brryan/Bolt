@@ -1,0 +1,8 @@
+
+Currently Loaded Modules:
+  1) cmake/3.10.2                4) java/1.8.0_45     7) hdf5-parallel/1.8.16
+  2) gcc/6.4.0                   5) cudatoolkit/9.1
+  3) python/3.5-anaconda-4.1.1   6) openmpi/2.1.2
+
+/net/scratch3/brryan/anaconda_envs/my_bolt_env/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)

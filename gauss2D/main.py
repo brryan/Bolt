@@ -40,11 +40,11 @@ f_initial = nls.f
 
 dfolder = '/net/scratch3/brryan/bolt/dump/'
 
-h5f = h5py.File(dfolder + '0000.h5', 'w')
-h5f.create_dataset('q1', data = nls.q1_center[:, :, N_g:-N_g, N_g:-N_g])
-h5f.create_dataset('q2', data = nls.q2_center[:, :, N_g:-N_g, N_g:-N_g])
-h5f.create_dataset('n', data = n_nls[:, :, N_g:-N_g, N_g:-N_g])
-h5f.close()
+#h5f = h5py.File(dfolder + '0000.h5', 'w')
+#h5f.create_dataset('q1', data = nls.q1_center[:, :, N_g:-N_g, N_g:-N_g])
+#h5f.create_dataset('q2', data = nls.q2_center[:, :, N_g:-N_g, N_g:-N_g])
+#h5f.create_dataset('n', data = n_nls[:, :, N_g:-N_g, N_g:-N_g])
+#h5f.close()
 
 init_sum = af.sum(nls.f[:, :, N_g:-N_g, N_g:-N_g])
 
@@ -60,6 +60,6 @@ for time_index, t0 in enumerate(time_array):
     nls.strang_timestep(dt)
     n_nls = nls.compute_moments('density')
     
-    h5f = h5py.File(dfolder + '%04d'%(time_index+1) + '.h5', 'w')
-    h5f.create_dataset('n', data = n_nls[:, :, N_g:-N_g, N_g:-N_g])
-    h5f.close()
+#    h5f = h5py.File(dfolder + '%04d'%(time_index+1) + '.h5', 'w')
+#    h5f.create_dataset('n', data = n_nls[:, :, N_g:-N_g, N_g:-N_g])
+#    h5f.close()

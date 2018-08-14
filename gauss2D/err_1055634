@@ -1,0 +1,32 @@
+
+Currently Loaded Modules:
+  1) cmake/3.10.2                4) java/1.8.0_45     7) hdf5-parallel/1.8.16
+  2) gcc/6.4.0                   5) cudatoolkit/9.1
+  3) python/3.5-anaconda-4.1.1   6) openmpi/2.1.2
+
+
+python:27465 terminated with signal 11 at PC=2af89904e65a SP=7ffd918ba720.  Backtrace:
+/usr/projects/hpcsoft/toss3/kodiak/openmpi/2.1.2-gcc-6.4.0/lib/libmpi.so.20(PMPI_Comm_test_inter+0x4a)[0x2af89904e65a]
+/usr/projects/p18_ebhlight3d/bolt_env/lib/python3.5/site-packages/mpi4py/MPI.cpython-35m-x86_64-linux-gnu.so(+0x9a3fe)[0x2af898cdb3fe]
+/usr/projects/p18_ebhlight3d/bolt_env/lib/python3.5/site-packages/petsc4py/lib/PETSc.cpython-35m-x86_64-linux-gnu.so(+0x2170eb)[0x2af78c1bb0eb]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyCFunction_Call+0x131)[0x2af77c4e6241]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalFrameEx+0x951f)[0x2af77c56ee6f]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x146a49)[0x2af77c56fa49]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalCodeEx+0x48)[0x2af77c56fbd8]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x9af42)[0x2af77c4c3f42]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyObject_Call+0x56)[0x2af77c490786]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x83e7c)[0x2af77c4ace7c]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyObject_Call+0x56)[0x2af77c490786]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(+0xdc0e3)[0x2af77c5050e3]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(+0xcfbaf)[0x2af77c4f8baf]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyObject_Call+0x56)[0x2af77c490786]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalFrameEx+0x7dc3)[0x2af77c56d713]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(+0x146a49)[0x2af77c56fa49]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalCodeEx+0x48)[0x2af77c56fbd8]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyEval_EvalCode+0x3b)[0x2af77c56fc1b]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyRun_FileExFlags+0x130)[0x2af77c594e70]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(PyRun_SimpleFileExFlags+0x18b)[0x2af77c59646b]
+/turquoise/usr/projects/p18_ebhlight3d/bolt_env/bin/../lib/libpython3.5m.so.1.0(Py_Main+0xcd1)[0x2af77c5b1811]
+python(main+0x15d)[0x400bbd]
+/usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2af77d46c3d5]
+python[0x400999]

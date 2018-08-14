@@ -1,0 +1,65 @@
+/users/brryan/github/Bolt/perf_test
+Tue Aug 14 10:17:51 MDT 2018
+App launch reported: 2 (out of 2) daemons - 0 (out of 1) procs
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[28934,1],0] (PID 13062)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+----------------------------------------------------------------------
+|                      ,/                                            |
+|                    ,'/          ____        ____                   |
+|                  ,' /          / __ )____  / / /_                  |
+|                ,'  /_____,    / __  / __ \/ / __/                  |
+|              .'____    ,'    / /_/ / /_/ / / /_                    |
+|                   /  ,'     /_____/\____/_/\__/                    |
+|                  / ,'                                              |
+|                 /,'                                                |
+|                /'                                                  |
+|--------------------------------------------------------------------|
+|Copyright (C) 2017-18, Research Division, Quazar Technologies, Delhi|
+|                                                                    |
+|  Bolt is free software; you can redistribute it and/or modify it   |
+|  under the terms of the GNU General Public License as published    |
+|  by the Free Software Foundation(version 3.0)                      |
+----------------------------------------------------------------------
+Resolution(Nq1, Nq2, Np1, Np2, Np3): ( 32 , 32 , 20 , 20 , 20 )
+Solver Method in q-space           : FVM
+    Reconstruction Method          : MINMOD
+    Riemann Solver                 : UPWIND-FLUX
+Solver Method in p-space           : FVM
+    Reconstruction Method          : MINMOD
+    Riemann Solver                 : UPWIND-FLUX
+Fields Type                        : ELECTRODYNAMIC
+Fields Initialization Method       : USER-DEFINED
+Fields Solver Method               : FDTD
+Number of Species                  : 1
+   Charge(Species 1)               : -1.0
+   Mass(Species 1)                 : 0.01
+Number of Devices/Node             : 4
+With: 0
+
+Backend Details for Nonlinear Solver:
+    Rank 0 of 0
+    On Node: ko029.localdomain
+    Device Details:
+        ArrayFire v3.7.0 (CUDA 64bit)
+        [0] : Tesla_P100-PCIE-16GB (Compute 6.0)
+        -1- : Tesla_P100-PCIE-16GB (Compute 6.0)
+        -2- : Tesla_P100-PCIE-16GB (Compute 6.0)
+        -3- : Tesla_P100-PCIE-16GB (Compute 6.0)
+
+Initial Maxwell's Constraints:
+MEAN(|divB|) = 0.0
+MEAN(|divE-rho|) = 1.13686837721616e-12
