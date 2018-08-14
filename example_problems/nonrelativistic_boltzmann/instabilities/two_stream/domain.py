@@ -3,7 +3,7 @@ from params import k_q1
 
 q1_start = 0
 q1_end   = 2 * pi / k_q1
-N_q1     = 64
+N_q1     = 128
 
 q2_start = 0
 q2_end   = 1
