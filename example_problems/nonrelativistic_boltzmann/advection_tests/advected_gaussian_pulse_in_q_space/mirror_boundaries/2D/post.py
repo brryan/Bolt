@@ -65,7 +65,8 @@ traj = odeint(vel, np.array([0.5, 0.5]), time)
 x = traj[:, 0]
 y = traj[:, 1]
 
-h5f = h5py.File('dump/%04d'%(time.size) + '.h5', 'r')
+#h5f = h5py.File('dump/%04d'%(time.size) + '.h5', 'r')
+h5f = h5py.File('dump/%04d'%(1800) + '.h5', 'r')
 n   = h5f['n'][:].reshape(N_q1, N_q2)
 h5f.close()
 

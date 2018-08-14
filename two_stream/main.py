@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib as mpl
 mpl.use('agg')
 import pylab as pl
-#import h5py
+import time
 
 from bolt.lib.physical_system import physical_system
 from bolt.lib.nonlinear.nonlinear_solver import nonlinear_solver
@@ -77,6 +77,10 @@ time_array = np.arange(0, params.t_final + dt, dt)
 #ke_data_ls  = np.zeros_like(time_array)
 #ke_data_nls = np.zeros_like(time_array)
 
+nstep = 100
+time_array = time_array[:nstep]
+
+start = time.time()
 for time_index, t0 in enumerate(time_array):
     
     #if(time_index%10 == 0):
@@ -96,6 +100,9 @@ for time_index, t0 in enumerate(time_array):
 
     nls.strang_timestep(dt)
     # ls.RK4_timestep(dt)
+
+end = time.time()
+print('Elapsed time:', end-start)
 
 #import h5py
 #h5f = h5py.File('data.h5', 'w')
