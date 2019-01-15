@@ -1,0 +1,30 @@
+#!/bin/bash
+#SBATCH -t 00:10:00       # walltime
+#SBATCH -N 1              # Number of nodes
+#SBATCH -n 1              # Number of MPI ranks
+#SBATCH -o out_%j         # Pathname of stdout
+#SBATCH -e err_%j         # Pathname of stderr
+##SBATCH -A w17_3dsn       # Allocation
+#SBATCH -A w19_mcpgpu     # Allocation
+#SBATCH --qos=standard    # QoS (standard, interactive, standby, large*, long*, high*)
+                          # See https://hpc.lanl.gov/scheduling_policies
+#SBATCH --mail-user=brryan@lanl.gov
+#SBATCH --mail-type=BEGIN                                                        
+#SBATCH --mail-type=END                                                          
+#SBATCH --mail-type=FAIL
+
+# Report setup
+module list
+pwd
+date
+
+# Conda environment
+source activate /usr/projects/p18_ebhlight3d/bolt_env_2019
+
+# Bolt as library
+export PYTHONPATH=$PYTHONPATH:/users/brryan/github/Bolt
+echo $PYTHONPATH
+
+#Run
+mpirun -np $SLURM_NTASKS python main.py
+
