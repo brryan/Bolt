@@ -41,8 +41,13 @@ af.sync()
 
 tic = MPI.Wtime()
 
+import time
+start = time.time()
 for i in range(100):
+    print(dt)
     nls.strang_timestep(dt)
+runtime = time.time() - start
+print('runtime:',runtime,'s')
 
 af.eval(nls.f)
 af.sync()

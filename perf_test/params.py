@@ -84,7 +84,7 @@ eps = 1 / (c**2 * mu)
 v1_bulk_left = 1 * v0
 
 # Time parameters:
-N_cfl   = 0.1
+N_cfl   = 0.01
 t_final = 200 * t0
 
 # Switch for solver components:

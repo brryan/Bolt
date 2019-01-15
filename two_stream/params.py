@@ -5,14 +5,14 @@ import arrayfire as af
 #fields_initialize = 'fft'
 #fields_solver     = 'fft'
 fields_type       = 'electrodynamic'
-fields_initialize = 'fft'
+fields_initialize = 'user-defined'
 fields_solver     = 'fdtd'
 
 # Units
 mu = 1
 
 # Dimensionality considered in velocity space:
-p_dim = 1
+p_dim = 3
 
 # Method in q-space
 solver_method_in_q = 'FVM'
@@ -28,7 +28,7 @@ t_final = 50
 N_cfl   = 0.04
 
 # Number of devices(GPUs/Accelerators) on each node:
-num_devices = 1
+num_devices = 4
 
 # Constants:
 mass               = [1]
@@ -40,11 +40,12 @@ k_q1  = 0.5
 alpha = 0.01
 
 fields_enabled           = True
-source_enabled           = False
+source_enabled           = True
 instantaneous_collisions = False
 hybrid_model_enabled     = False
 
 # Variation of collisional-timescale parameter through phase space:
 @af.broadcast
 def tau(q1, q2, p1, p2, p3):
-    return (0.001 * q1**0 * p1**0)
+    return 1.*t_final
+    #return (0.001 * q1**0 * p1**0)

@@ -255,7 +255,8 @@ class nonlinear_solver(object):
                                          proc_sizes    = (nproc_in_q1, 
                                                           nproc_in_q2
                                                          ),
-                                         stencil_type  = 1,
+                                         #stencil_type  = 1,
+                                         stencil_type  = 0,
                                          comm          = self._comm
                                         )
 
