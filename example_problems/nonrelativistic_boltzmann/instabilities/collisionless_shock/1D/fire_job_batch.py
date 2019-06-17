@@ -6,10 +6,10 @@ tau_end   = 100. #* t0
 tau_step  = 10.  #* t0
 
 source_filepath = \
-        '/home/mchandra/bolt_master/bolt/example_problems/nonrelativistic_boltzmann/instabilities/collisionless_shock/1D'
+        '/users/brryan/github/Bolt/example_problems/nonrelativistic_boltzmann/instabilities/collisionless_shock/1D'
 job_script_file = 'job_script_gpu3001' # Can also be empty
 run_filepath = \
-        '/home/mchandra/bolt_master/bolt/example_problems/nonrelativistic_boltzmann/instabilities/collisionless_shock/1D/tau_'
+        '/net/scratch3/brryan/github/Bolt/example_problems/nonrelativistic_boltzmann/instabilities/collisionless_shock/1D/tau_'
 
 submit_jobs = False # Be careful!
 
@@ -19,11 +19,11 @@ for tau in np.arange(tau_start, tau_end, tau_step):
     # If folder does not exist, make one and add all files from source folder
 
     if not os.path.isdir(filepath):
-        os.mkdir(filepath)
-        os.mkdir(filepath+"/dump_f")
-        os.mkdir(filepath+"/dump_fields")
-        os.mkdir(filepath+"/dump_moments")
-        os.mkdir(filepath+"/images")
+        os.makedirs(filepath)
+        os.makedirs(filepath+"/dump_f")
+        os.makedirs(filepath+"/dump_fields")
+        os.makedirs(filepath+"/dump_moments")
+        os.makedirs(filepath+"/images")
 
         os.system("cp " + (source_filepath + "/*.py ") 
                         + (source_filepath + "/" + job_script_file)
