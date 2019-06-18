@@ -44,7 +44,8 @@ pl.rcParams['ytick.direction']  = 'in'
 # (q1, q2, p1, p2, p3) --> (p1, p2)
 # (0,  1 , 2 , 3 , 4 )
 # Hence we need to average along axes 0, 1 and 4:
-f0 = return_f('dump_f/t=0.000000.bin') # [N_q1, N_q2, N_s, N_p3, N_p2, N_p1]
+#f0 = return_f('dump_f/t=0.000000.bin') # [N_q1, N_q2, N_s, N_p3, N_p2, N_p1]
+f0 = return_f('/net/scratch3/brryan/github/Bolt/example_problems/nonrelativistic_boltzmann/instabilities/collisionless_shock/1D/tau_inf/dump_f/t=0.000000.bin')
 
 species = 0
 
